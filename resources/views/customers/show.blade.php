@@ -167,21 +167,27 @@
                                             @csrf
                                             @method('PUT')
                                             <div class="modal-body">
-                                                <div class="form-group">
-                                                    <label for="">{{__('ID')}}</label><span class="text-danger"> *</span>
-                                                    <input type="text" name="code" class="form-control" value="{{ $ct->code_customer }}" style="text-transform:uppercase" maxlength="8">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="">{{__('Nombre Completo')}}</label><span class="text-danger"> *</span>
-                                                    <input type="text" name="name" class="form-control" value="{{ $ct->name_customer }}" style="text-transform:uppercase">
-                                                </div>
+                                                @if (Auth::user()->id == 1)                                                    
+                                                    <div class="form-group">
+                                                        <label for="">{{__('ID')}}</label><span class="text-danger"> *</span>
+                                                        <input type="text" name="code" class="form-control" value="{{ $ct->code_customer }}" style="text-transform:uppercase" maxlength="8">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="">{{__('Nombre Completo')}}</label><span class="text-danger"> *</span>
+                                                        <input type="text" name="name" class="form-control" value="{{ $ct->name_customer }}" style="text-transform:uppercase">
+                                                    </div>
+                                                @endif                                                
                                                 <div class="form-row">
                                                     <div class="form-group col-lg-6 col-md-6">
                                                         <label for="">{{__('Pais')}}</label><span class="text-danger"> *</span>
                                                         <select class="form-control test " name="country" id="test">
                                                             <option value=""></option>
                                                             @foreach ($country as $co)
-                                                                <option value="{{$co['id']}}">{{$co['name_country']}}</option>                                            
+                                                                <option value="{{$co['id']}}"
+                                                                    @if ($co['id'] == $ct->country_customer)
+                                                                        selected
+                                                                    @endif
+                                                                >{{$co['name_country']}}</option>                                            
                                                             @endforeach
                                                         </select>
                                                     </div>                            

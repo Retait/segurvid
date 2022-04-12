@@ -18,8 +18,8 @@ class SecurityController extends Controller
      */
     public function index()
     {
-        $session = DB::table('sessions')->where('user_id', '=', Auth::user()->id)->get();
-
+        $session = DB::table('sessions')->where('user_id', '=', Auth::user()->id)->take(2)->get();
+        
         return view('security.show',compact('session'));
     }
 

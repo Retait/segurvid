@@ -99,7 +99,7 @@
     var data = @json($gcontent);
     var ctx = document.getElementById('myChart1');
     var myChart = new Chart(ctx, {
-        type: 'polarArea',
+        type: 'bar',
         data: {
             labels,
             datasets: [{

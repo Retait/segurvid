@@ -218,8 +218,11 @@ class CustomerController extends Controller
     public function update(Request $request, Customer $id)
     {
 
-        $id->code_customer = $request->code;
-        $id->name_customer = $request->name;
+        if( Auth::user()->id == 1){
+
+            $id->code_customer = $request->code;
+            $id->name_customer = $request->name;
+        }
         $id->address_customer = $request->address;
         $id->country_customer = $request->country;
         $id->city_customer = $request->city;

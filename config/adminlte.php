@@ -233,6 +233,11 @@ return [
 
         // Sidebar items:
         [
+            'text'   => 'Inicio',
+            'route'  => '/',
+            'icon'   => 'fas fa-home',
+        ],
+        [
             'text'   => 'Dashboard',
             'route'  => 'dashboard',
             'icon'   => 'fas fa-tachometer-alt',
