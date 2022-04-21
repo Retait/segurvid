@@ -99,7 +99,7 @@
     var data = @json($gcontent);
     var ctx = document.getElementById('myChart1');
     var myChart = new Chart(ctx, {
-        type: 'polarArea',
+        type: 'bar',
         data: {
             labels,
             datasets: [{
@@ -137,7 +137,6 @@
     $(document).ready(function() {
         $('#tblsale').DataTable({
             "paging":   true,
-            "ordering": false,
             "info":     false,
             "pagingType": "simple_numbers",
             "language": {

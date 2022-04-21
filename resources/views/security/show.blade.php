@@ -137,7 +137,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-10 col-md-10 col-sm-10"><h5>{{ __('SMS Authentication')}}</h5></div>
                             <div class="col-12 col-lg-2 col-md-2 col-sm-2">
-                                <button type="button" class="btn btn-block bg-gradient-warning btn-sm float-right">{{ __('Enable')}}</button>
+                                <button type="button" class="btn btn-block btn-dark btn-sm float-right">{{ __('Enable')}}</button>
                             </div>
                         </div>
                         <p class="text-justify">{{ __('Used for withdrawals and security modifications')}}</p>
@@ -153,7 +153,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-10 col-md-10 col-sm-10"><h5>{{ __('Device Managment')}}</h5></div>
                             <div class="col-12 col-lg-2 col-md-2 col-sm-2">
-                                <button type="button" class="btn btn-block bg-gradient-warning btn-sm float-right">{{ __('Manage')}}</button>
+                                <button type="button" class="btn btn-block btn-dark btn-sm float-right">{{ __('Manage')}}</button>
                             </div>
                         </div>                        
                     </div>                    
@@ -168,7 +168,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-10 col-md-10 col-sm-10"><h5>{{ __('Address Management')}}</h5></div>
                             <div class="col-12 col-lg-2 col-md-2 col-sm-2">
-                                <button type="button" class="btn btn-block bg-gradient-warning btn-sm float-right">{{ __('Manage')}}</button>
+                                <button type="button" class="btn btn-block btn-dark btn-sm float-right">{{ __('Manage')}}</button>
                             </div>
                             <div class="col-10">
                                 <p class="text-justify">
@@ -195,7 +195,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-10 col-md-10 col-sm-10"><h5>{{ __('Anti-phishing Code')}}</h5></div>
                             <div class="col-12 col-lg-2 col-md-2 col-sm-2">
-                                <button type="button" class="btn btn-block bg-gradient-warning btn-sm float-right">{{ __('Enable')}}</button>
+                                <button type="button" class="btn btn-block btn-dark btn-sm float-right">{{ __('Enable')}}</button>
                             </div>
                             <div class="col-10">
                                 <p class="text-justify">

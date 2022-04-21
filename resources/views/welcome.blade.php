@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Neutral - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Home - Segurvid</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -45,10 +45,15 @@
                 <li class="nav-item"><a href="#attorneys-section" class="nav-link"><span>Asesores</span></a></li>
                 {{-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li> --}}
                 <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contacto</span></a></li>
-                @if (Auth::check()) {
+                @if (Auth::check())
                     <li class="nav-item cta mr-2"><a href="{{url('/dashboard')}}" class="nav-link">Dashboard</a></li>
-                    <li class="nav-item cta"><a href="{{route('logout')}}" class="nav-link"><i class="fa fa-power-off"></i></a></li>
-                    @else
+					<form action="{{route('logout')}}" method="POST">
+					@csrf
+                    	<li class="nav-item cta">
+							<button type="submit" class="nav-link"><i class="fa fa-power-off"></i></button>
+						</li>
+					</form>
+				@else
                     <li class="nav-item cta"><a href="{{route('login')}}" class="nav-link">Iniciar sesión</a></li>
                 @endif
 	        </ul>

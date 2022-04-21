@@ -42,6 +42,7 @@ Route::post('dg2fa', [SecurityController::class, 'dg2fa'])->name('dg2fa');
 
 Route::get('case', [CustomerController::class, 'index'])->name('case');
 Route::post('case/store', [CustomerController::class, 'store'])->name('case.store');
+Route::delete('case/{id}', [CustomerController::class, 'destroy'])->name('case.cancel');
 Route::post('case/valid', [CustomerController::class, 'valid'])->name('case/valid');
 
 Route::get('customer', [CustomerController::class, 'show'])->name('customer.show');

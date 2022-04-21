@@ -218,8 +218,11 @@ class CustomerController extends Controller
     public function update(Request $request, Customer $id)
     {
 
-        $id->code_customer = $request->code;
-        $id->name_customer = $request->name;
+        if( Auth::user()->id == 1){
+
+            $id->code_customer = $request->code;
+            $id->name_customer = $request->name;
+        }
         $id->address_customer = $request->address;
         $id->country_customer = $request->country;
         $id->city_customer = $request->city;
@@ -237,9 +240,12 @@ class CustomerController extends Controller
      * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customer $customer)
+    public function destroy(Order $id)
     {
-        //
+        $id->status_order = 4;
+        $id->save();
+
+        return redirect('admin/case/list')->with('cancel','done');
     }
 
     /**
@@ -255,4 +261,17 @@ class CustomerController extends Controller
         return response()->json($customer);
     }
     
+        /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Customer  $customer
+     * @return \Illuminate\Http\Response
+     */
+    public function cancel(Order $id)
+    {
+        $id->status_order = 4;
+        $id->save();
+
+        return redirect('admin/case')->with('cancel','done');
+    }
 }

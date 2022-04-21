@@ -6,7 +6,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
         <style>
         body{
+<<<<<<< HEAD
             font-family: Arial, Helvetica, sans-serif;
+=======
+            font-family: Arial, Helvetica, sans-serif
+>>>>>>> e04b7e0c5e3ba474dfb44fc9e715e698dcce0388
         }
         h5{
             font-size: 14px;
