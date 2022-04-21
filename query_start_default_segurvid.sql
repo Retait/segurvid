@@ -1,0 +1,69 @@
+﻿insert into insurances(id, name_insurance) values
+  (1,'CRECER SEGUROS S.A.'),
+  (2,'INTERSEGURO COMPAÑIA DE SEGUROS S.A.'),
+  (3,'LA POSITIVA SEGUROS Y REASEGUROS S.A.A.'),
+  (4,'MAPFRE PERU COMPAÑÍA DE SEGUROS Y REASEGUROS'),
+  (5,'PROTECTA S.A. COMPAÑIA DE SEGUROS'),
+  (6,'RIMAC SEGUROS Y REASEGUROS');
+
+insert into companies (id,code_company,name_company,status_company) values
+  (1,'12345678900','CLÍNICA CAYETANO',1),
+  (2,'12345678900','CLÍNICA CHENET',1),
+  (3,'12345678900','CLÍNICA ORTEGA',1),
+  (4,'12345678900','CLÍNICA HUANCAYO',1),
+  (5,'12345678900','CLÍNICA MIRANDA',1),
+  (6,'12345678900','CLÍNICA SANTO DOMINGO',1),
+  (7,'12345678900','HOSPITAL CARRIÓN',1),
+  (8,'12345678900','HOSPITAL DEL CARMEN',1);
+
+INSERT INTO `categories` (`id`,`name_category`) VALUES
+ (1,'SOAT'),
+ (2,'FONDO DE COMPENSACIÓN'),
+ (3,'FONDO DE PENSIÓN'),
+ (4,'SEGURO DE VIDA LEY'),
+ (5,'ASESORÍA');
+
+INSERT INTO `services` (`id`,`code_service`,`name_service`,`category_id`) VALUES
+ (1,'SIITE','INDEMNIZACIÓN POR INCAPACIDAD TEMPORAL',1),
+ (2,'SIIPE','INDEMNIZACIÓN POR INVALIDEZ PERMANENTE',1),
+ (3,'SIFAL','INDEMNIZACIÓN POR FALLECIMIENTO',1),
+ (4,'SORSE','REEMBOLSO DE GASTOS POR SEPELIO',1),
+ (5,'FCRGM','REEMBOLSO DE GASTOS MÉDICOS',2),
+ (6,'FPERE','REEMBOLSO DE FONDO DE PENSIÓN',3),
+ (7,'SEVLR','REMUNERACIÓN DE SEGURO DE VIDA LEY',4),
+ (8,'ASESO','ASESORÍA JURÍDICA',5);
+
+INSERT INTO `type_accidents` (`id`,`type_accident`) VALUES
+ (1,'ATROPELLO CON SUBSECUENTE DE LESIONES PERSONALES'),
+ (2,'ATROPELLO CON SUBSECUENTE MUERTE INSTANTANEA'),
+ (3,'CHOQUE CON SUBSECUENTE CON LESIONES PERSONALES'),
+ (4,'DESPISTE CON SUBSECUENTE CON LESIONES PERSONALES'),
+ (5,'VOLCADURA CON SUBSUCUENTE CON LESIONES PERSONALES');
+
+INSERT INTO `payments` (`id`,`name_payment`) VALUES
+  (1,'Cheque'),
+  (2,'Vaucher'),
+  (3,'App móvil'),
+  (4,'Otro');
+
+INSERT INTO `kin` (`id`,`name_kin`) VALUES
+ (1,'MADRE'),
+ (2,'PADRE'),
+ (3,'ESPOSO(A)'),
+ (4,'HERMANO(A)'),
+ (5,'HIJO(A)'),
+ (6,'TÍO(A)'),
+ (7,'SOBRINO(A)'),
+ (8,'PRIMO(A)'),
+ (9,'ABUELO(A)'),
+ (10,'NIETO(A)'),
+ (11,'BISABUELO(A)'),
+ (12,'TATARABUELO(A)'),
+ (13,'TATARANIETO(A)'),
+ (14,'BISNIETO(A)'),
+ (15,'VECINO(A)'),
+ (16,'AMIGO(A)');
+
+insert into users(id, name,email,password,job_user,country_birth,country_residence,code_company,user_company,industry_company,country_company,city_company,address_company,currency_company,tax_company,status_user) values
+ (1, 'YAMILE ORTEGA CASTRO', 'yamile@retait.net','$2y$10$kzC8LtavHNAlk7I4O4Ik9.0l62tM97qigVZBLDOZUefMFUTEdSNIa','6231a362817228ec2cf6158e','6231a362817228ec2cf6158e','6230dcdf817228ec2cf61573','20603637683','SEGURVID SRL','6230b2a49d0d9bb7f0d664d6','6231a362817228ec2cf6158e','HUANCAYO','JIRÓN JULIO C. TELLO OF. 102','PEN','18','1'),
+ (2, 'PAMELA ROMÁN', 'pamela@retait.net','$2y$10$kzC8LtavHNAlk7I4O4Ik9.0l62tM97qigVZBLDOZUefMFUTEdSNIa','6231a362817228ec2cf6158e','6231a362817228ec2cf6158e','6230dd0c817228ec2cf61576','20603637683','SEGURVID SRL','6230b2a49d0d9bb7f0d664d6','6231a362817228ec2cf6158e','HUANCAYO','JIRÓN JULIO C. TELLO OF. 102','PEN','18','1');

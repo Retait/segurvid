@@ -6,16 +6,16 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
         <style>
         body{
-            font-family: 'Times New Roman', Times, serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
         h5{
-            font-size: 15px;
+            font-size: 14px;
         }
         h6{
-            font-size: 13px;
+            font-size: 12px;
         }
         p{
-            font-size: 13px;
+            font-size: 11px;
             text-align: justify;
             line-height : 23px;
         }
