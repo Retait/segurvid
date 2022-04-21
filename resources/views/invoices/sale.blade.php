@@ -137,7 +137,6 @@
     $(document).ready(function() {
         $('#tblsale').DataTable({
             "paging":   true,
-            "ordering": false,
             "info":     false,
             "pagingType": "simple_numbers",
             "language": {

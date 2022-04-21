@@ -240,9 +240,12 @@ class CustomerController extends Controller
      * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customer $customer)
+    public function destroy(Order $id)
     {
-        //
+        $id->status_order = 4;
+        $id->save();
+
+        return redirect('admin/case/list')->with('cancel','done');
     }
 
     /**
@@ -258,4 +261,17 @@ class CustomerController extends Controller
         return response()->json($customer);
     }
     
+        /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Customer  $customer
+     * @return \Illuminate\Http\Response
+     */
+    public function cancel(Order $id)
+    {
+        $id->status_order = 4;
+        $id->save();
+
+        return redirect('admin/case')->with('cancel','done');
+    }
 }

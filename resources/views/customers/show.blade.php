@@ -268,4 +268,24 @@
     )
 </script>
 @endif
+<script>
+    $(document).ready(function() {
+        $('#tblcustomer').DataTable({
+            "paging":   true,
+            "info":     false,
+            "pagingType": "simple_numbers",
+            "language": {
+                "sLengthMenu":    "_MENU_",
+                "sSearch":        "<i class='text-secondary fas fa-search'></i>",
+                "oPaginate": {
+                    "sFirst":    "«",
+                    "sLast":    "»",
+                    "sNext":    "»",
+                    "sPrevious": "«"
+                }
+            }
+        });
+        $('.dataTables_paginate').addClass('pagination-sm');
+    });
+</script>
 @stop

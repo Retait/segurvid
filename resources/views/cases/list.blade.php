@@ -32,7 +32,6 @@
                             <th>{{__('SOLICITANTE')}}</th>
                             <th>{{__('TELÉFONO')}}</th>
                             <th>{{__('CONTRATO')}}</th>
-                            <th>{{__('CONTRATO')}}</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -105,8 +104,13 @@
                                                 </form>
                                             </div>
                                             </div>
-                                        </div>
-                                        <a href="" class="btn btn-default btn-sm"><i class="fas fa-times"></i></a>
+                                        </div>                  
+                                        <form action="{{route('case.cancel',$vo->odid)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                            <button type="submit" class="btn btn-default btn-sm"><i class="fas fa-times"></i>Anular</button>
+                                        </form>                      
+                                        {{-- <a href="{{route('cancel')}}" class="btn btn-default btn-sm"><i class="fas fa-times"></i></a> --}}
                                     </div>
                                 @else
                                     <a href="{{route('invoice')}}" class="btn btn-default btn-sm"><i class="fas fa-eye"></i>&nbsp;{{__('Ver')}}</a>
@@ -127,5 +131,33 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    $(document).ready(function() {
+        $('#tblorder').DataTable({            
+            "paging":   true,
+            "info":     false,
+            "pagingType": "simple_numbers",
+            "language": {
+                "sLengthMenu":    "_MENU_",
+                "sSearch":        "<i class='text-secondary fas fa-search'></i>",
+                "oPaginate": {
+                    "sFirst":    "«",
+                    "sLast":    "»",
+                    "sNext":    "»",
+                    "sPrevious": "«"
+                }
+            }
+        });
+        $('.dataTables_paginate').addClass('pagination-sm');
+    });
+</script>
+@if (session('cancel') == 'done')
+<script> 
+    Swal.fire(
+    'Hecho!',
+    'El registro se anuló correctamente',
+    'success'
+    )
+</script>
+@endif
 @stop
