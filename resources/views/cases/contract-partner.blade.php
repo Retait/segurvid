@@ -50,7 +50,7 @@
                                 EN HUANCAYO SIENDO {{$d_order}} SE PRESENTAN LIBRE Y VOLUNTARIAMENTE LAS SIGUIENTES PARTES:</p>
                             <p>
                                 LA EMPRESA <strong>{{$vo->user_company}}</strong> CON RUC <strong>{{$vo->code_company}}</strong> (ASESORES Y CONSULTORES), 
-                                CON OFICINA LEGAL EN {{$vo->address_company}} DE LA CIUDAD DE {{$vo->city_company}},
+                                CON OFICINA LEGAL EN {{$vo->address_company}} DEL {{$vo->city_company}},
                                 QUIEN EN ADELANTE SE DENOMINARÁ <strong>EL ASESOR</strong>.
                             </p>                 
                             <p>
@@ -139,6 +139,7 @@
                             <p class="text-center firm"><strong>EL CLIENTE</strong>
                             <br>{{$vo->name_partner}}
                             <br>DNI {{$vo->code_partner}}
+                            <br>TEL {{$vo->phone_partner}}
                             </p>                
                         </div>
                     </div>
