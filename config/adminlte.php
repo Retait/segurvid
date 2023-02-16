@@ -242,12 +242,12 @@ return [
             'route'  => 'dashboard',
             'icon'   => 'fas fa-tachometer-alt',
         ],
-        ['header' => 'ADMIN'],
+        /*['header' => 'ADMIN'],
         [
             'text'  => 'Usuarios',
             'route' => 'user',
             'icon'  => 'fas fa-fw fa-user',
-        ],
+        ],*/
         ['header' => 'CUENTA'],
         [
             'text'  => 'Perfíl',

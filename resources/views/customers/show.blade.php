@@ -142,7 +142,8 @@
                                 </div>
                             </td>
                             <td>
-                                <img src="{{ asset('storage/flag/'.$ct->country_customer.'.svg')}}" class="img-fluid" width="20px" height="20px" alt="">                                    
+                                {!! $ct->icon_country!!}
+                                {{-- <img src="{{ asset('storage/flag/'.$ct->country_customer.'.svg')}}" class="img-fluid" width="20px" height="20px" alt="">                                     --}}
                             </td>
                             <td>{{$ct->city_customer}}</td>
                             <td>{{$ct->address_customer}}</td>
