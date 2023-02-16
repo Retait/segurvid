@@ -26,7 +26,7 @@
                             <th>{{__('STATUS')}}</th>
                             <th>{{__('ATENCIÓN')}}</th>
                             <th>{{__('ACCIDENTE')}}</th>
-                            <th>{{__('CLIENTE')}}</th>
+                            <th>{{__('PACIENTE')}}</th>
                             <th>{{__('SEGURO')}}</th>
                             <th>{{__('PORCENTAJE')}}</th>
                             <th>{{__('SOLICITANTE')}}</th>
@@ -91,7 +91,7 @@
                                                     @csrf
                                                     <div class="modal-body">
                                                         <h5 class="text-secondary"><i class="fas fa-exclamation-circle"></i>&nbsp;{{__('Nota')}}:</h5>
-                                                        <p>{{__('Ingresa el monto total del cheque o depósito al cliente para poder calcular el porcentaje.')}}</p>
+                                                        <p>{{__('Ingresa el monto total del cheque o depósito al paciente para poder calcular el porcentaje.')}}</p>
                                                         <div class="form group">
                                                             <label for="total">{{__('Total')}}</label>
                                                             <input type="number" class="form-control" name="total" id="total" step="0.01" placeholder="0.00" required min="0">

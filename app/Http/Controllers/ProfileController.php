@@ -6,12 +6,16 @@ use App\Models\User;
 use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Invoice;
+use App\Models\Country;
+use App\Models\Currency;
+use App\Models\Industry;
+use App\Models\Job;
 use App\Models\ViewInvoice;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Dbfx\LaravelStrapi\LaravelStrapi;
+// use Dbfx\LaravelStrapi\LaravelStrapi;
 
 class ProfileController extends Controller
 {
@@ -22,16 +26,16 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $strapi = new LaravelStrapi();
+        // $strapi = new LaravelStrapi();
 
         $customer = Customer::count();
         $order = Order::count();
         $sale = Invoice::count();
         $invoice = ViewInvoice::where('usid',Auth::user()->id)->sum('total_invoice');
-        $country = $strapi->collection('countries');
-        $currency = $strapi->collection('currencies');
-        $industry = $strapi->collection('industries');
-        $job = $strapi->collection('jobs');
+        $country = Country::all();
+        $currency = Currency::all();
+        $industry = Industry::all();
+        $job = Job::all();
 
         return view('profile.index',compact('customer','order','invoice','country','currency','industry','job'));
     }

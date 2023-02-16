@@ -112,6 +112,13 @@
                                 PARA DOTAR DE VALIDEZ JURÍDICA AL PRESENTE CONTRATO DE PRESTACIÓN DE SERVICIOS, LAS PARTES 
                                 LEGALIZAN SUS FIRMAS E IMPRIMEN SUS HUELLAS DIGITALES EN LA CIUDAD DE HUANCAYO.
                             </p>
+                            <h6>NOVENO. GASTOS ADMINISTRATIVOS:</h6>
+                            <p>
+                                EL BENEFICIARIO ASUMIRÁ LOS GASTOS ADMINISTRATIVOS PARA EL ARMADO DE SU EXPEDIENTE COMO 
+                                (1) HISTORIA CLÍNICA, (2) FORMATO DE CERTIFICADO MÉDICO, (3) HONORARIOS DEL MÉDICO, 
+                                (4) COSTO DEL CONTRATO Y OTROS QUE SURJAN CON EL FIN DE RESPETAR LA LEGALIDAD DEL 
+                                CONTRATO Y EN FAVOR DEL PACIENTE.
+                            </p>
                         </div>  
                     </div>
                     <br>

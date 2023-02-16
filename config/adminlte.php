@@ -242,9 +242,15 @@ return [
             'route'  => 'dashboard',
             'icon'   => 'fas fa-tachometer-alt',
         ],
+        ['header' => 'ADMIN'],
+        [
+            'text'  => 'Usuarios',
+            'route' => 'user',
+            'icon'  => 'fas fa-fw fa-user',
+        ],
         ['header' => 'CUENTA'],
         [
-            'text'  => 'profile',
+            'text'  => 'Perfíl',
             'route' => 'profile',
             'icon'  => 'fas fa-fw fa-user',
         ],
@@ -260,14 +266,14 @@ return [
         ],
         ['header' => 'OPERACIONES'],
         [
-            'text'       => 'Clientes',
+            'text'       => 'Pacientes',
             'route'      => 'customer.show',
-            'icon'       => 'fas fa-fw fa-users',
+            'icon'       => 'fas fa-fw fa-procedures',
         ],
         [
             'text'       => 'Ventas',
             'route'      => 'invoice',
-            'icon'       => 'fas fa-fw fa-tags',
+            'icon'       => 'fas fa-fw fa-coins',
         ],
         [
             'text'    => 'Casos',

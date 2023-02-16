@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +59,7 @@ Route::post('invoice/test', [InvoiceController::class, 'test'])->name('invoice/t
 Route::post('invoice/{id}/sale', [InvoiceController::class, 'sale'])->name('invoice.sale');
 
 Route::get('export/customer', [ExportController::class, 'ecustomer'])->name('export.customer');
+
+Route::get('user', [UserController::class, 'index'])->name('user');
+Route::post('user', [UserController::class, 'store'])->name('user.store');
+Route::put('user/{id}/update', [UserController::class, 'update'])->name('user.update');

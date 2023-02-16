@@ -203,7 +203,7 @@
                         <select class="form-control" disabled>
                           @foreach ($currency as $cu)
                             <option value="{{$cu['id']}}"
-                            @if ($cu['code_iso'] ==  Auth::user()->currency_company)
+                            @if ($cu['id'] ==  Auth::user()->currency_company)
                                 selected
                             @endif
                             >{{$cu['name_currency']}}</option>

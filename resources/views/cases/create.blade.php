@@ -54,7 +54,7 @@
                                     
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6">
-                                    <label for="">{{__('Nombres Cliente')}}</label>
+                                    <label for="">{{__('Nombres del Paciente')}}</label>
                                     <input type="text" class="form-control" name="customer" id="customer" style="text-transform:uppercase">
                                   </div>
                                 </div>
@@ -212,7 +212,7 @@
                                     <dl class="row" id="listcustomer">
                                       <dt class="col-sm-3">{{__('DNI')}}</dt>
                                       <dd class="col-sm-9" id="dd_code"></dd>
-                                      <dt class="col-sm-3">{{__('Cliente')}}</dt>
+                                      <dt class="col-sm-3">{{__('Paciente')}}</dt>
                                       <dd class="col-sm-9 text-uppercase" id="dd_customer"></dd>
                                       <dt class="col-sm-3">{{__('Teléfono')}}</dt>
                                       <dd class="col-sm-9" id="dd_phone"></dd>

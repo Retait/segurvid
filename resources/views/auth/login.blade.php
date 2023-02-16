@@ -1,11 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-<<<<<<< HEAD
-<img src="{{asset('/img/RetaitLogo_vt.png')}}" class="img-fluid mx-auto profile-user-img img-circle" width="30%" alt="">
-=======
             <img src="{{asset('/img/RetaitLogo_vt.png')}}" class="img-fluid mx-auto profile-user-img img-circle" width="30%" alt="">
->>>>>>> e04b7e0c5e3ba474dfb44fc9e715e698dcce0388
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

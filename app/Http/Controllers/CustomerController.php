@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Customer;
 use App\Models\Insurance;
 use App\Models\Company;
@@ -11,7 +12,7 @@ use App\Models\Kin;
 use App\Models\TypeAccident;
 
 use Illuminate\Support\Facades\Auth;
-use Dbfx\LaravelStrapi\LaravelStrapi;
+// use Dbfx\LaravelStrapi\LaravelStrapi;
 
 use Illuminate\Http\Request;
 
@@ -24,14 +25,14 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $strapi = new LaravelStrapi();
+        // $strapi = new LaravelStrapi();
 
         $insurance = Insurance::all();
         $company = Company::all();
         $service = Service::all();
         $kin = Kin::all();
         $tyac = TypeAccident::all();
-        $country = $strapi->collection('countries');
+        $country = Country::all();
 
         return view('cases.create', compact('country','insurance','company','service','tyac','kin'));
     }
@@ -189,10 +190,10 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        $strapi = new LaravelStrapi();
+        // $strapi = new LaravelStrapi();
         
-        $customer = Customer::all();
-        $country = $strapi->collection('countries');
+        $customer = Customer::orderBy('created_at', 'DESC')->get();
+        $country = Country::all();
 
         return view('customers.show', compact('customer','country'));
     }

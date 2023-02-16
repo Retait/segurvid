@@ -3,7 +3,7 @@
 @section('title', 'Customer')
 
 @section('content_header')
-    <h5><strong>{{__('Clientes')}}</strong></h5>
+    <h5><strong>{{__('Pacientes')}}</strong></h5>
 @stop
 
 @section('content')
@@ -40,13 +40,13 @@
             </div>
         </div>
         <a href="{{ route('export.customer') }}" type="button" id="btnexcustomer" class="btn btn-default"><i class="fas fa-download"></i>&nbsp;{{__('Exportar')}}</a>
-        <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#exampleModalCenter">+&nbsp;{{__('Agregar Cliente')}}</button>
+        <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#exampleModalCenter">+&nbsp;{{__('Agregar Paciente')}}</button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">                    
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">{{__('Agregar Cliente')}}</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{__('Agregar Paciente')}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -67,9 +67,9 @@
                                 <label for="">{{__('Pais')}}</label><span class="text-danger"> *</span>
                                 <select class="form-control test " name="country" id="test">
                                     <option value=""></option>
-                                    @foreach ($country as $co)
+                                    {{-- @foreach ($country as $co)
                                         <option value="{{$co['id']}}">{{$co['name_country']}}</option>                                            
-                                    @endforeach
+                                    @endforeach --}}
                                 </select>
                             </div>                            
                             <div class="form-group col-lg-6 col-md-6">
@@ -116,7 +116,7 @@
                     <thead>
                         <tr class="text-sm text-bold">
                             <th>{{__('ID')}}</th>
-                            <th>{{__('CLIENTE')}}</th>
+                            <th>{{__('PACIENTE')}}</th>
                             <th>{{__('PAÍS')}}</th>
                             <th>{{__('CUIDAD')}}</th>
                             <th>{{__('DIRECCION')}}</th>
@@ -158,7 +158,7 @@
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">                    
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLongTitle">{{__('Agregar Cliente')}}</h5>
+                                            <h5 class="modal-title" id="exampleModalLongTitle">{{__('Agregar Paciente')}}</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
